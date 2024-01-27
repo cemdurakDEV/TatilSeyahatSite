@@ -1,0 +1,31 @@
+﻿@model TatilSeyahatSite.Models.Siniflar.BlogYorum
+
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Free Easy-Trip Website Template | Home :: w3layouts</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="~/web/css/style.css" type="text/css" media="all" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+</head>
+<body>
+    <div>
+        <div class="comments">
+            <h3>SON YORUMLAR</h3>
+            <ul>
+
+                @foreach (var x in Model.Deger4)
+                {
+                    <li><a href="#">@x.Kullanici </a> on <a href="/Blog/BlogDetay/@x.Blog.ID"> '@x.Blog.Baslik'  </a></li>
+                }
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

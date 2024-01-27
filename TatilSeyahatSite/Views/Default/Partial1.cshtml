@@ -1,0 +1,39 @@
+﻿@using TatilSeyahatSite.Models.Siniflar
+@model List<Blog>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Partial1</title>
+</head>
+<body>
+    <div> 
+        <div class="con-bot">
+            @foreach (var x in Model)
+            {
+                <div class="left">
+                    <div class="bot-left">
+                        <img src="@x.BlogImage" style ="width:300px; height:150px;" alt=""/>
+                    </div>
+                    <div class="left-text">
+                        <h4>@x.Baslik</h4>
+                        <span class="doller">@x.Tarih.ToString("dd.MM.yyyy")</span>
+                        <p style="text-align:inherit">@x.Aciklama.Substring(0, 150) ....</p>
+                        <p><a href="/Blog/BlogDetay/@x.ID"><span class="read">Devamını Oku</span></a></p>
+                    </div>
+                </div>
+            }
+
+            @Html.Action("Partial2", "Default")
+
+            <div class="clear"></div>
+        </div>
+    </div>
+</body>
+</html>

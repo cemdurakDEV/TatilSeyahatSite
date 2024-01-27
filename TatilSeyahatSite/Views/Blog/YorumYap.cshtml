@@ -1,0 +1,13 @@
+﻿@model TatilSeyahatSite.Models.Siniflar.Blog
+
+<div class="content-form">
+    <h3>Bir Yorum Yapın</h3>
+    <form style="margin-bottom:20px;" method="post">
+        <input type="text" placeholder="Blog ID" name="Blogid"  value="@ViewBag.deger" required readonly/>
+        <input type="text" placeholder="Kullanıcı Adı" name="Kullanici" required />
+        <input type="text" placeholder="Mail Adresi" name="Mail" required />
+        <textarea placeholder="Mesaj" name="Yorum"></textarea>
+        <input type="submit" value="Gönder" />
+    </form>
+</div>
+

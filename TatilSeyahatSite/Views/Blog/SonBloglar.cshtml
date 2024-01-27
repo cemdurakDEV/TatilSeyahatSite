@@ -1,0 +1,38 @@
+﻿@using TatilSeyahatSite.Models.Siniflar
+@model List<Blog>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Free Easy-Trip Website Template | Home :: w3layouts</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="~/web/css/style.css" type="text/css" media="all" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+</head>
+<body>
+    <div>
+        <div class="recent">
+            <h3>SON BLOGLAR</h3>
+            <ul>
+                @foreach (var x in Model)
+                {
+
+                    <a href="/Blog/BlogDetay/@x.ID"><img src="@x.BlogImage" alt="" class="bot-left" style="width:60%; margin-bottom:3%;" />
+                        <br />
+                        <li class="right">
+                            @x.Baslik
+                        </li>
+                    </a>
+                    <div class="clearfix"></div>
+                    <br /><br />
+                }
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
